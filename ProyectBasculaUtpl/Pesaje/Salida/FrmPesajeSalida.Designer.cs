@@ -41,6 +41,7 @@
             this.Puerto_3 = new System.Windows.Forms.RadioButton();
             this.Puerto_1 = new System.Windows.Forms.RadioButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.TxtCliente = new System.Windows.Forms.TextBox();
             this.TxtVehiculo = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -54,7 +55,7 @@
             this.TxtHumedad = new System.Windows.Forms.TextBox();
             this.panelBotones = new System.Windows.Forms.Panel();
             this.BtnGuardar = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -64,6 +65,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.label11);
             this.panel3.Controls.Add(this.label20);
             this.panel3.Controls.Add(this.BtnPesarEntrada);
@@ -79,7 +81,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.label11.Location = new System.Drawing.Point(805, 17);
+            this.label11.Location = new System.Drawing.Point(1104, 35);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(95, 55);
             this.label11.TabIndex = 98;
@@ -90,7 +92,7 @@
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.label20.Location = new System.Drawing.Point(376, 17);
+            this.label20.Location = new System.Drawing.Point(669, 35);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(100, 55);
             this.label20.TabIndex = 97;
@@ -106,7 +108,7 @@
             this.BtnPesarEntrada.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnPesarEntrada.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnPesarEntrada.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.BtnPesarEntrada.Location = new System.Drawing.Point(47, 42);
+            this.BtnPesarEntrada.Location = new System.Drawing.Point(13, 71);
             this.BtnPesarEntrada.Name = "BtnPesarEntrada";
             this.BtnPesarEntrada.Size = new System.Drawing.Size(137, 137);
             this.BtnPesarEntrada.TabIndex = 1;
@@ -120,9 +122,8 @@
             this.TxtPesoKG.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TxtPesoKG.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtPesoKG.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.TxtPesoKG.Location = new System.Drawing.Point(805, 74);
+            this.TxtPesoKG.Location = new System.Drawing.Point(805, 92);
             this.TxtPesoKG.Name = "TxtPesoKG";
-            this.TxtPesoKG.ReadOnly = true;
             this.TxtPesoKG.Size = new System.Drawing.Size(398, 116);
             this.TxtPesoKG.TabIndex = 1;
             this.TxtPesoKG.Text = "0";
@@ -134,9 +135,8 @@
             this.TxtPesoQQ.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TxtPesoQQ.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtPesoQQ.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.TxtPesoQQ.Location = new System.Drawing.Point(374, 74);
+            this.TxtPesoQQ.Location = new System.Drawing.Point(374, 92);
             this.TxtPesoQQ.Name = "TxtPesoQQ";
-            this.TxtPesoQQ.ReadOnly = true;
             this.TxtPesoQQ.Size = new System.Drawing.Size(398, 116);
             this.TxtPesoQQ.TabIndex = 0;
             this.TxtPesoQQ.Text = "0";
@@ -232,6 +232,16 @@
             this.panel1.Size = new System.Drawing.Size(1223, 220);
             this.panel1.TabIndex = 273;
             // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(584, 54);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(400, 35);
+            this.textBox1.TabIndex = 287;
+            // 
             // TxtCliente
             // 
             this.TxtCliente.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
@@ -293,7 +303,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.label6.Location = new System.Drawing.Point(1037, 106);
+            this.label6.Location = new System.Drawing.Point(1037, 105);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(155, 31);
             this.label6.TabIndex = 286;
@@ -325,7 +335,7 @@
             this.TxtImpureza.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.TxtImpureza.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TxtImpureza.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtImpureza.Location = new System.Drawing.Point(1037, 139);
+            this.TxtImpureza.Location = new System.Drawing.Point(1037, 138);
             this.TxtImpureza.Name = "TxtImpureza";
             this.TxtImpureza.Size = new System.Drawing.Size(166, 35);
             this.TxtImpureza.TabIndex = 278;
@@ -384,15 +394,16 @@
             this.BtnGuardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BtnGuardar.UseVisualStyleBackColor = false;
             // 
-            // textBox1
+            // label1
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(584, 54);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(400, 35);
-            this.textBox1.TabIndex = 287;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.label1.Location = new System.Drawing.Point(3, 4);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(435, 55);
+            this.label1.TabIndex = 288;
+            this.label1.Text = "PESO DE SALIDA";
             // 
             // FrmPesajeSalida
             // 
@@ -446,5 +457,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Panel panelBotones;
         private System.Windows.Forms.Button BtnGuardar;
+        private System.Windows.Forms.Label label1;
     }
 }

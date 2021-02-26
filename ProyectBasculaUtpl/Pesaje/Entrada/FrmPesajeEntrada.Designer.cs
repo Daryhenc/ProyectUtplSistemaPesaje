@@ -32,12 +32,14 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
+            this.BtnPesarEntrada = new System.Windows.Forms.Button();
             this.TxtPesoKG = new System.Windows.Forms.TextBox();
             this.TxtPesoQQ = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.Puerto_4 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.Puerto_3 = new System.Windows.Forms.RadioButton();
             this.Puerto_1 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.TxtVehiculo = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -52,11 +54,9 @@
             this.CbProducto = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelBotones = new System.Windows.Forms.Panel();
-            this.BtnCliente = new System.Windows.Forms.Button();
-            this.BtnPesarEntrada = new System.Windows.Forms.Button();
-            this.BtnGuardar = new System.Windows.Forms.Button();
             this.BtnProducto = new System.Windows.Forms.Button();
-            this.Puerto_4 = new System.Windows.Forms.RadioButton();
+            this.BtnCliente = new System.Windows.Forms.Button();
+            this.BtnGuardar = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -98,6 +98,24 @@
             this.label20.TabIndex = 97;
             this.label20.Text = "QQ";
             // 
+            // BtnPesarEntrada
+            // 
+            this.BtnPesarEntrada.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BtnPesarEntrada.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnPesarEntrada.BackgroundImage")));
+            this.BtnPesarEntrada.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BtnPesarEntrada.FlatAppearance.BorderColor = System.Drawing.SystemColors.HotTrack;
+            this.BtnPesarEntrada.FlatAppearance.BorderSize = 3;
+            this.BtnPesarEntrada.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnPesarEntrada.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnPesarEntrada.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.BtnPesarEntrada.Location = new System.Drawing.Point(47, 42);
+            this.BtnPesarEntrada.Name = "BtnPesarEntrada";
+            this.BtnPesarEntrada.Size = new System.Drawing.Size(137, 137);
+            this.BtnPesarEntrada.TabIndex = 1;
+            this.BtnPesarEntrada.Text = "PESAR";
+            this.BtnPesarEntrada.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BtnPesarEntrada.UseVisualStyleBackColor = false;
+            // 
             // TxtPesoKG
             // 
             this.TxtPesoKG.BackColor = System.Drawing.SystemColors.InfoText;
@@ -106,7 +124,6 @@
             this.TxtPesoKG.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.TxtPesoKG.Location = new System.Drawing.Point(805, 74);
             this.TxtPesoKG.Name = "TxtPesoKG";
-            this.TxtPesoKG.ReadOnly = true;
             this.TxtPesoKG.Size = new System.Drawing.Size(398, 116);
             this.TxtPesoKG.TabIndex = 1;
             this.TxtPesoKG.Text = "0";
@@ -120,7 +137,6 @@
             this.TxtPesoQQ.ForeColor = System.Drawing.SystemColors.InactiveCaption;
             this.TxtPesoQQ.Location = new System.Drawing.Point(374, 74);
             this.TxtPesoQQ.Name = "TxtPesoQQ";
-            this.TxtPesoQQ.ReadOnly = true;
             this.TxtPesoQQ.Size = new System.Drawing.Size(398, 116);
             this.TxtPesoQQ.TabIndex = 0;
             this.TxtPesoQQ.Text = "0";
@@ -137,6 +153,34 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1223, 77);
             this.panel2.TabIndex = 271;
+            // 
+            // Puerto_4
+            // 
+            this.Puerto_4.AutoSize = true;
+            this.Puerto_4.BackColor = System.Drawing.Color.Transparent;
+            this.Puerto_4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Puerto_4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Puerto_4.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.Puerto_4.Location = new System.Drawing.Point(939, 22);
+            this.Puerto_4.Name = "Puerto_4";
+            this.Puerto_4.Size = new System.Drawing.Size(233, 33);
+            this.Puerto_4.TabIndex = 4;
+            this.Puerto_4.Text = "BASCULA COM 4";
+            this.Puerto_4.UseVisualStyleBackColor = false;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.BackColor = System.Drawing.Color.Transparent;
+            this.radioButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton1.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.radioButton1.Location = new System.Drawing.Point(340, 22);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(233, 33);
+            this.radioButton1.TabIndex = 3;
+            this.radioButton1.Text = "BASCULA COM 2";
+            this.radioButton1.UseVisualStyleBackColor = false;
             // 
             // Puerto_3
             // 
@@ -167,20 +211,6 @@
             this.Puerto_1.TabStop = true;
             this.Puerto_1.Text = "BASCULA COM 1";
             this.Puerto_1.UseVisualStyleBackColor = false;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.BackColor = System.Drawing.Color.Transparent;
-            this.radioButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.radioButton1.Location = new System.Drawing.Point(340, 22);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(233, 33);
-            this.radioButton1.TabIndex = 3;
-            this.radioButton1.Text = "BASCULA COM 2";
-            this.radioButton1.UseVisualStyleBackColor = false;
             // 
             // TxtVehiculo
             // 
@@ -345,62 +375,6 @@
             this.panelBotones.Size = new System.Drawing.Size(1267, 137);
             this.panelBotones.TabIndex = 272;
             // 
-            // BtnCliente
-            // 
-            this.BtnCliente.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.BtnCliente.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnCliente.BackgroundImage")));
-            this.BtnCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.BtnCliente.Dock = System.Windows.Forms.DockStyle.Left;
-            this.BtnCliente.FlatAppearance.BorderColor = System.Drawing.SystemColors.HotTrack;
-            this.BtnCliente.FlatAppearance.BorderSize = 3;
-            this.BtnCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnCliente.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.BtnCliente.Location = new System.Drawing.Point(137, 0);
-            this.BtnCliente.Name = "BtnCliente";
-            this.BtnCliente.Size = new System.Drawing.Size(137, 137);
-            this.BtnCliente.TabIndex = 2;
-            this.BtnCliente.Text = "CLIENTE";
-            this.BtnCliente.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.BtnCliente.UseVisualStyleBackColor = false;
-            // 
-            // BtnPesarEntrada
-            // 
-            this.BtnPesarEntrada.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.BtnPesarEntrada.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnPesarEntrada.BackgroundImage")));
-            this.BtnPesarEntrada.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.BtnPesarEntrada.FlatAppearance.BorderColor = System.Drawing.SystemColors.HotTrack;
-            this.BtnPesarEntrada.FlatAppearance.BorderSize = 3;
-            this.BtnPesarEntrada.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnPesarEntrada.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnPesarEntrada.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.BtnPesarEntrada.Location = new System.Drawing.Point(47, 42);
-            this.BtnPesarEntrada.Name = "BtnPesarEntrada";
-            this.BtnPesarEntrada.Size = new System.Drawing.Size(137, 137);
-            this.BtnPesarEntrada.TabIndex = 1;
-            this.BtnPesarEntrada.Text = "PESAR";
-            this.BtnPesarEntrada.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.BtnPesarEntrada.UseVisualStyleBackColor = false;
-            // 
-            // BtnGuardar
-            // 
-            this.BtnGuardar.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.BtnGuardar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnGuardar.BackgroundImage")));
-            this.BtnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.BtnGuardar.Dock = System.Windows.Forms.DockStyle.Left;
-            this.BtnGuardar.FlatAppearance.BorderColor = System.Drawing.SystemColors.HotTrack;
-            this.BtnGuardar.FlatAppearance.BorderSize = 3;
-            this.BtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnGuardar.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.BtnGuardar.Location = new System.Drawing.Point(0, 0);
-            this.BtnGuardar.Name = "BtnGuardar";
-            this.BtnGuardar.Size = new System.Drawing.Size(137, 137);
-            this.BtnGuardar.TabIndex = 0;
-            this.BtnGuardar.Text = "GUARDAR";
-            this.BtnGuardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.BtnGuardar.UseVisualStyleBackColor = false;
-            // 
             // BtnProducto
             // 
             this.BtnProducto.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -420,19 +394,43 @@
             this.BtnProducto.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BtnProducto.UseVisualStyleBackColor = false;
             // 
-            // Puerto_4
+            // BtnCliente
             // 
-            this.Puerto_4.AutoSize = true;
-            this.Puerto_4.BackColor = System.Drawing.Color.Transparent;
-            this.Puerto_4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Puerto_4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Puerto_4.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.Puerto_4.Location = new System.Drawing.Point(939, 22);
-            this.Puerto_4.Name = "Puerto_4";
-            this.Puerto_4.Size = new System.Drawing.Size(233, 33);
-            this.Puerto_4.TabIndex = 4;
-            this.Puerto_4.Text = "BASCULA COM 4";
-            this.Puerto_4.UseVisualStyleBackColor = false;
+            this.BtnCliente.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BtnCliente.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnCliente.BackgroundImage")));
+            this.BtnCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BtnCliente.Dock = System.Windows.Forms.DockStyle.Left;
+            this.BtnCliente.FlatAppearance.BorderColor = System.Drawing.SystemColors.HotTrack;
+            this.BtnCliente.FlatAppearance.BorderSize = 3;
+            this.BtnCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCliente.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.BtnCliente.Location = new System.Drawing.Point(137, 0);
+            this.BtnCliente.Name = "BtnCliente";
+            this.BtnCliente.Size = new System.Drawing.Size(137, 137);
+            this.BtnCliente.TabIndex = 2;
+            this.BtnCliente.Text = "CLIENTE";
+            this.BtnCliente.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BtnCliente.UseVisualStyleBackColor = false;
+            // 
+            // BtnGuardar
+            // 
+            this.BtnGuardar.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BtnGuardar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnGuardar.BackgroundImage")));
+            this.BtnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BtnGuardar.Dock = System.Windows.Forms.DockStyle.Left;
+            this.BtnGuardar.FlatAppearance.BorderColor = System.Drawing.SystemColors.HotTrack;
+            this.BtnGuardar.FlatAppearance.BorderSize = 3;
+            this.BtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnGuardar.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.BtnGuardar.Location = new System.Drawing.Point(0, 0);
+            this.BtnGuardar.Name = "BtnGuardar";
+            this.BtnGuardar.Size = new System.Drawing.Size(137, 137);
+            this.BtnGuardar.TabIndex = 0;
+            this.BtnGuardar.Text = "GUARDAR";
+            this.BtnGuardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BtnGuardar.UseVisualStyleBackColor = false;
             // 
             // FrmPesajeEntrada
             // 

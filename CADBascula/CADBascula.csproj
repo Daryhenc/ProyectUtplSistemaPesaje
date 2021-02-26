@@ -48,6 +48,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -57,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cliente\CADCliente.cs" />
+    <Compile Include="Cliente\ClassDgvLlenarCliente.cs" />
     <Compile Include="Cliente\DSCliente.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -71,6 +73,7 @@
       <DependentUpon>DSPesaje.xsd</DependentUpon>
     </Compile>
     <Compile Include="Producto\CADProducto.cs" />
+    <Compile Include="Producto\ClassDgvLlenarProduto.cs" />
     <Compile Include="Producto\DSProducto.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

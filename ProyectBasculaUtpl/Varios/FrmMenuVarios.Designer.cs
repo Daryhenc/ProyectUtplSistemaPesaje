@@ -1,6 +1,7 @@
-﻿namespace ProyectBasculaUtpl.Pesaje
+﻿
+namespace ProyectBasculaUtpl.Varios
 {
-    partial class FrmMenuCompra
+    partial class FrmMenuVarios
     {
         /// <summary>
         /// Required designer variable.
@@ -43,7 +44,7 @@
             this.PanelContenedorHijo.Location = new System.Drawing.Point(0, 61);
             this.PanelContenedorHijo.Name = "PanelContenedorHijo";
             this.PanelContenedorHijo.Size = new System.Drawing.Size(1267, 785);
-            this.PanelContenedorHijo.TabIndex = 243;
+            this.PanelContenedorHijo.TabIndex = 245;
             // 
             // PanelMenuCerrar
             // 
@@ -55,29 +56,28 @@
             this.PanelMenuCerrar.Location = new System.Drawing.Point(0, 0);
             this.PanelMenuCerrar.Name = "PanelMenuCerrar";
             this.PanelMenuCerrar.Size = new System.Drawing.Size(1267, 61);
-            this.PanelMenuCerrar.TabIndex = 242;
+            this.PanelMenuCerrar.TabIndex = 244;
             // 
             // BtnBoletoSalida
             // 
             this.BtnBoletoSalida.Dock = System.Windows.Forms.DockStyle.Left;
             this.BtnBoletoSalida.FlatAppearance.BorderColor = System.Drawing.Color.Navy;
-            this.BtnBoletoSalida.FlatAppearance.BorderSize = 2;
+            this.BtnBoletoSalida.FlatAppearance.BorderSize = 0;
             this.BtnBoletoSalida.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnBoletoSalida.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnBoletoSalida.ForeColor = System.Drawing.Color.Navy;
             this.BtnBoletoSalida.Location = new System.Drawing.Point(80, 0);
             this.BtnBoletoSalida.Name = "BtnBoletoSalida";
-            this.BtnBoletoSalida.Size = new System.Drawing.Size(80, 61);
+            this.BtnBoletoSalida.Size = new System.Drawing.Size(89, 61);
             this.BtnBoletoSalida.TabIndex = 4;
-            this.BtnBoletoSalida.Text = "SALIDA";
+            this.BtnBoletoSalida.Text = "PRODUCTO";
             this.BtnBoletoSalida.UseVisualStyleBackColor = true;
-            this.BtnBoletoSalida.Click += new System.EventHandler(this.BtnBoletoSalida_Click);
             // 
             // BtnBoletoEntrada
             // 
             this.BtnBoletoEntrada.Dock = System.Windows.Forms.DockStyle.Left;
             this.BtnBoletoEntrada.FlatAppearance.BorderColor = System.Drawing.Color.Navy;
-            this.BtnBoletoEntrada.FlatAppearance.BorderSize = 2;
+            this.BtnBoletoEntrada.FlatAppearance.BorderSize = 0;
             this.BtnBoletoEntrada.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnBoletoEntrada.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnBoletoEntrada.ForeColor = System.Drawing.Color.Navy;
@@ -85,9 +85,8 @@
             this.BtnBoletoEntrada.Name = "BtnBoletoEntrada";
             this.BtnBoletoEntrada.Size = new System.Drawing.Size(80, 61);
             this.BtnBoletoEntrada.TabIndex = 3;
-            this.BtnBoletoEntrada.Text = "ENTRADA";
+            this.BtnBoletoEntrada.Text = "CLIENTES";
             this.BtnBoletoEntrada.UseVisualStyleBackColor = true;
-            this.BtnBoletoEntrada.Click += new System.EventHandler(this.BtnBoletoEntrada_Click);
             // 
             // label2
             // 
@@ -100,7 +99,7 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "PESAJE ENTRADA Y SALIDA";
             // 
-            // FrmMenuCompra
+            // FrmMenuVarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -108,9 +107,9 @@
             this.Controls.Add(this.PanelContenedorHijo);
             this.Controls.Add(this.PanelMenuCerrar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FrmMenuCompra";
+            this.Name = "FrmMenuVarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmMenuCompra";
+            this.Text = "FrmMenuVarios";
             this.PanelMenuCerrar.ResumeLayout(false);
             this.PanelMenuCerrar.PerformLayout();
             this.ResumeLayout(false);

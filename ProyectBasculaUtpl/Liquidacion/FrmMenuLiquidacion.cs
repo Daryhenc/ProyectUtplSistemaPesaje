@@ -1,6 +1,4 @@
-﻿using ProyectBasculaUtpl.Liquidacion;
-using ProyectBasculaUtpl.Pesaje;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ProyectBasculaUtpl
+namespace ProyectBasculaUtpl.Liquidacion
 {
-    public partial class FrmPrincipal : Form
+    public partial class FrmMenuLiquidacion : Form
     {
-        public FrmPrincipal()
+        public FrmMenuLiquidacion()
         {
             InitializeComponent();
         }
@@ -36,14 +34,9 @@ namespace ProyectBasculaUtpl
             FrmHijo.Show();
         }
 
-        private void BtnPesaje_Click(object sender, EventArgs e)
-        {
-            AbrirFormulario(new FrmMenuCompra());
-        }
-
         private void BtnLiquidar_Click(object sender, EventArgs e)
         {
-            AbrirFormulario(new FrmMenuLiquidacion());
+          //  AbrirFormulario(new FrmPesajeEntrada());
         }
     }
 }

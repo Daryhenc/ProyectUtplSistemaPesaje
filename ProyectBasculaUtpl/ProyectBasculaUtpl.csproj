@@ -67,6 +67,18 @@
     <Compile Include="FrmPrincipal.Designer.cs">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Liquidacion\CrearLiquidacion\FrmCrearLiquidacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Liquidacion\CrearLiquidacion\FrmCrearLiquidacion.Designer.cs">
+      <DependentUpon>FrmCrearLiquidacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Liquidacion\FrmMenuLiquidacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Liquidacion\FrmMenuLiquidacion.Designer.cs">
+      <DependentUpon>FrmMenuLiquidacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pesaje\Entrada\FrmPesajeEntrada.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,8 +99,32 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Varios\Cliente\FrmCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Varios\Cliente\FrmCliente.Designer.cs">
+      <DependentUpon>FrmCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Varios\FrmMenuVarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Varios\FrmMenuVarios.Designer.cs">
+      <DependentUpon>FrmMenuVarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Varios\Producto\FrmProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Varios\Producto\FrmProducto.Designer.cs">
+      <DependentUpon>FrmProducto.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Liquidacion\CrearLiquidacion\FrmCrearLiquidacion.resx">
+      <DependentUpon>FrmCrearLiquidacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Liquidacion\FrmMenuLiquidacion.resx">
+      <DependentUpon>FrmMenuLiquidacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pesaje\Entrada\FrmPesajeEntrada.resx">
       <DependentUpon>FrmPesajeEntrada.cs</DependentUpon>
@@ -108,6 +144,15 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Varios\Cliente\FrmCliente.resx">
+      <DependentUpon>FrmCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Varios\FrmMenuVarios.resx">
+      <DependentUpon>FrmMenuVarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Varios\Producto\FrmProducto.resx">
+      <DependentUpon>FrmProducto.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -133,6 +178,11 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\CADBascula\CADBascula.csproj">
+      <Project>{b739b16d-7fe2-4ede-9483-511a765f0d50}</Project>
+      <Name>CADBascula</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

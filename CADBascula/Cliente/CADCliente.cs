@@ -11,11 +11,14 @@ namespace CADBascula.Cliente
     {
 
         ClienteTableAdapter adapter = new ClienteTableAdapter();
-        public void InsertCliente(string CI, string Cliente, string Telefono)
+        public void InsertCliente(string Nombre, string CI, string Telefono, DateTime FechaNacimiento)
         {
-            adapter.InsertCliente(CI, Cliente, Telefono);
+            adapter.InsertCliente( Nombre, CI, Telefono, FechaNacimiento);
         }
 
-
+        public void DeleteCliente(int IdCliente)
+        {
+            adapter.DeleteCliente(IdCliente);
+        }
     }
 }

@@ -29,18 +29,17 @@
         private void InitializeComponent()
         {
             this.panel7 = new System.Windows.Forms.Panel();
-            this.BtnReporte = new System.Windows.Forms.Button();
             this.BtnLiquidar = new System.Windows.Forms.Button();
             this.BtnPesaje = new System.Windows.Forms.Button();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.Cerrar = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.pbLogo = new System.Windows.Forms.PictureBox();
             this.PanelContenedorHijo = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel7.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -50,7 +49,6 @@
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.DodgerBlue;
-            this.panel7.Controls.Add(this.BtnReporte);
             this.panel7.Controls.Add(this.BtnLiquidar);
             this.panel7.Controls.Add(this.BtnPesaje);
             this.panel7.Controls.Add(this.panel10);
@@ -61,20 +59,6 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(163, 846);
             this.panel7.TabIndex = 9;
-            // 
-            // BtnReporte
-            // 
-            this.BtnReporte.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnReporte.FlatAppearance.BorderSize = 0;
-            this.BtnReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnReporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnReporte.ForeColor = System.Drawing.SystemColors.Control;
-            this.BtnReporte.Location = new System.Drawing.Point(0, 392);
-            this.BtnReporte.Name = "BtnReporte";
-            this.BtnReporte.Size = new System.Drawing.Size(163, 89);
-            this.BtnReporte.TabIndex = 6;
-            this.BtnReporte.Text = "REPORTE";
-            this.BtnReporte.UseVisualStyleBackColor = true;
             // 
             // BtnLiquidar
             // 
@@ -89,6 +73,7 @@
             this.BtnLiquidar.TabIndex = 5;
             this.BtnLiquidar.Text = "LIQUIDAR";
             this.BtnLiquidar.UseVisualStyleBackColor = true;
+            this.BtnLiquidar.Click += new System.EventHandler(this.BtnLiquidar_Click);
             // 
             // BtnPesaje
             // 
@@ -148,6 +133,36 @@
             this.panel8.Size = new System.Drawing.Size(163, 154);
             this.panel8.TabIndex = 0;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(26, 104);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(118, 31);
+            this.label3.TabIndex = 79;
+            this.label3.Text = "PESAJE";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(59, 65);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(52, 31);
+            this.label2.TabIndex = 78;
+            this.label2.Text = "DE";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(19, 26);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(133, 31);
+            this.label1.TabIndex = 77;
+            this.label1.Text = "SISTEMA";
+            // 
             // pbLogo
             // 
             this.pbLogo.BackColor = System.Drawing.Color.Transparent;
@@ -168,36 +183,6 @@
             this.PanelContenedorHijo.Name = "PanelContenedorHijo";
             this.PanelContenedorHijo.Size = new System.Drawing.Size(1267, 846);
             this.PanelContenedorHijo.TabIndex = 11;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(19, 26);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(133, 31);
-            this.label1.TabIndex = 77;
-            this.label1.Text = "SISTEMA";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(59, 65);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 31);
-            this.label2.TabIndex = 78;
-            this.label2.Text = "DE";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(26, 104);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(118, 31);
-            this.label3.TabIndex = 79;
-            this.label3.Text = "PESAJE";
             // 
             // FrmPrincipal
             // 
@@ -222,7 +207,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Button BtnReporte;
         private System.Windows.Forms.Button BtnLiquidar;
         private System.Windows.Forms.Button BtnPesaje;
         private System.Windows.Forms.Panel panel10;
