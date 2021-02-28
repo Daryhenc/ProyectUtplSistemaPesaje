@@ -67,6 +67,13 @@
     <Compile Include="FrmPrincipal.Designer.cs">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Liquidacion\CrearLiquidacion\ClassDatoSalida.cs" />
+    <Compile Include="Liquidacion\CrearLiquidacion\FrmBusquedaSalida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Liquidacion\CrearLiquidacion\FrmBusquedaSalida.Designer.cs">
+      <DependentUpon>FrmBusquedaSalida.cs</DependentUpon>
+    </Compile>
     <Compile Include="Liquidacion\CrearLiquidacion\FrmCrearLiquidacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +97,13 @@
     </Compile>
     <Compile Include="Pesaje\FrmMenuCompra.Designer.cs">
       <DependentUpon>FrmMenuCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pesaje\Salida\ClassDatoEntrada.cs" />
+    <Compile Include="Pesaje\Salida\FrmBusquedaEntrada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pesaje\Salida\FrmBusquedaEntrada.Designer.cs">
+      <DependentUpon>FrmBusquedaEntrada.cs</DependentUpon>
     </Compile>
     <Compile Include="Pesaje\Salida\FrmPesajeSalida.cs">
       <SubType>Form</SubType>
@@ -120,6 +134,9 @@
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Liquidacion\CrearLiquidacion\FrmBusquedaSalida.resx">
+      <DependentUpon>FrmBusquedaSalida.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Liquidacion\CrearLiquidacion\FrmCrearLiquidacion.resx">
       <DependentUpon>FrmCrearLiquidacion.cs</DependentUpon>
     </EmbeddedResource>
@@ -131,6 +148,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Pesaje\FrmMenuCompra.resx">
       <DependentUpon>FrmMenuCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pesaje\Salida\FrmBusquedaEntrada.resx">
+      <DependentUpon>FrmBusquedaEntrada.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pesaje\Salida\FrmPesajeSalida.resx">
       <DependentUpon>FrmPesajeSalida.cs</DependentUpon>

@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSBusquedas" targetNamespace="http://tempuri.org/DSBusquedas.xsd" xmlns:mstns="http://tempuri.org/DSBusquedas.xsd" xmlns="http://tempuri.org/DSBusquedas.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="BDBasculaConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="BDBasculaConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.CADBascula.Properties.Settings.GlobalReference.Default.BDBasculaConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="BusquedaEntradaTableAdapter" GeneratorDataComponentClassName="BusquedaEntradaTableAdapter" Name="BusquedaEntrada" UserDataComponentName="BusquedaEntradaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="BDBasculaConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT BD.IdBoletoDetalle, BD.Cod, PRO.Producto, CL.Nombre, CL.Ci, 
+BD.Vehiculo, BD.Placa, BD.Humedad, BD.Impureza, BE.PesoEntradaKg, BE.PesoEntradaQQ, 
+BE.Fecha 
+FROM BoletoEntrada BE 
+INNER JOIN BoletoDetalle BD ON BE.IdBoletoDetalle = BD.IdBoletoDetalle 
+INNER JOIN Cliente CL ON BD.IDCliente = CL.IdCliente 
+INNER JOIN Producto PRO ON BD.IDProducto = PRO.IdProducto
+WHERE BD.IdBoletoDetalle NOT IN (
+	SELECT BS.IdBoletoDetalle
+	FROM BoletoSalida BS
+)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="IdBoletoDetalle" DataSetColumn="IdBoletoDetalle" />
+              <Mapping SourceColumn="Cod" DataSetColumn="Cod" />
+              <Mapping SourceColumn="Producto" DataSetColumn="Producto" />
+              <Mapping SourceColumn="Nombre" DataSetColumn="Nombre" />
+              <Mapping SourceColumn="Ci" DataSetColumn="Ci" />
+              <Mapping SourceColumn="Vehiculo" DataSetColumn="Vehiculo" />
+              <Mapping SourceColumn="Placa" DataSetColumn="Placa" />
+              <Mapping SourceColumn="Humedad" DataSetColumn="Humedad" />
+              <Mapping SourceColumn="Impureza" DataSetColumn="Impureza" />
+              <Mapping SourceColumn="PesoEntradaKg" DataSetColumn="PesoEntradaKg" />
+              <Mapping SourceColumn="PesoEntradaQQ" DataSetColumn="PesoEntradaQQ" />
+              <Mapping SourceColumn="Fecha" DataSetColumn="Fecha" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="BusquedaSalidaTableAdapter" GeneratorDataComponentClassName="BusquedaSalidaTableAdapter" Name="BusquedaSalida" UserDataComponentName="BusquedaSalidaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="BDBasculaConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT BD.IdBoletoDetalle, BD.Cod, PR.Producto, CL.Nombre, CL.Ci, 
+BD.Vehiculo, BD.Placa, BD.Humedad, BD.Impureza, BE.PesoEntradaKg, BE.PesoEntradaQQ,
+BS.PesoSalidaKg, BS.PesoSalidaQQ    
+FROM   BoletoDetalle BD 
+INNER JOIN BoletoEntrada BE ON BD.IdBoletoDetalle = BE.IdBoletoDetalle 
+INNER JOIN BoletoSalida BS ON BD.IdBoletoDetalle = BS.IdBoletoDetalle 
+INNER JOIN Cliente CL ON BD.IDCliente = CL.IdCliente 
+INNER JOIN Producto PR ON BD.IDProducto = PR.IdProducto
+WHERE BD.IdBoletoDetalle NOT IN (
+	SELECT  LI.IdBoletoDetalle
+	FROM Liquidacion LI
+)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="IdBoletoDetalle" DataSetColumn="IdBoletoDetalle" />
+              <Mapping SourceColumn="Cod" DataSetColumn="Cod" />
+              <Mapping SourceColumn="Producto" DataSetColumn="Producto" />
+              <Mapping SourceColumn="Nombre" DataSetColumn="Nombre" />
+              <Mapping SourceColumn="Ci" DataSetColumn="Ci" />
+              <Mapping SourceColumn="Vehiculo" DataSetColumn="Vehiculo" />
+              <Mapping SourceColumn="Placa" DataSetColumn="Placa" />
+              <Mapping SourceColumn="Humedad" DataSetColumn="Humedad" />
+              <Mapping SourceColumn="Impureza" DataSetColumn="Impureza" />
+              <Mapping SourceColumn="PesoEntradaKg" DataSetColumn="PesoEntradaKg" />
+              <Mapping SourceColumn="PesoEntradaQQ" DataSetColumn="PesoEntradaQQ" />
+              <Mapping SourceColumn="PesoSalidaKg" DataSetColumn="PesoSalidaKg" />
+              <Mapping SourceColumn="PesoSalidaQQ" DataSetColumn="PesoSalidaQQ" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSBusquedas" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DSBusquedas" msprop:Generator_UserDSName="DSBusquedas">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="BusquedaEntrada" msprop:Generator_TableClassName="BusquedaEntradaDataTable" msprop:Generator_TableVarName="tableBusquedaEntrada" msprop:Generator_TablePropName="BusquedaEntrada" msprop:Generator_RowDeletingName="BusquedaEntradaRowDeleting" msprop:Generator_RowChangingName="BusquedaEntradaRowChanging" msprop:Generator_RowEvHandlerName="BusquedaEntradaRowChangeEventHandler" msprop:Generator_RowDeletedName="BusquedaEntradaRowDeleted" msprop:Generator_UserTableName="BusquedaEntrada" msprop:Generator_RowChangedName="BusquedaEntradaRowChanged" msprop:Generator_RowEvArgName="BusquedaEntradaRowChangeEvent" msprop:Generator_RowClassName="BusquedaEntradaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IdBoletoDetalle" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnIdBoletoDetalle" msprop:Generator_ColumnPropNameInRow="IdBoletoDetalle" msprop:Generator_ColumnPropNameInTable="IdBoletoDetalleColumn" msprop:Generator_UserColumnName="IdBoletoDetalle" type="xs:int" />
+              <xs:element name="Cod" msprop:Generator_ColumnVarNameInTable="columnCod" msprop:Generator_ColumnPropNameInRow="Cod" msprop:Generator_ColumnPropNameInTable="CodColumn" msprop:Generator_UserColumnName="Cod" type="xs:int" minOccurs="0" />
+              <xs:element name="Producto" msprop:Generator_ColumnVarNameInTable="columnProducto" msprop:Generator_ColumnPropNameInRow="Producto" msprop:Generator_ColumnPropNameInTable="ProductoColumn" msprop:Generator_UserColumnName="Producto" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Nombre" msprop:Generator_ColumnVarNameInTable="columnNombre" msprop:Generator_ColumnPropNameInRow="Nombre" msprop:Generator_ColumnPropNameInTable="NombreColumn" msprop:Generator_UserColumnName="Nombre" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Ci" msprop:Generator_ColumnVarNameInTable="columnCi" msprop:Generator_ColumnPropNameInRow="Ci" msprop:Generator_ColumnPropNameInTable="CiColumn" msprop:Generator_UserColumnName="Ci" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Vehiculo" msprop:Generator_ColumnVarNameInTable="columnVehiculo" msprop:Generator_ColumnPropNameInRow="Vehiculo" msprop:Generator_ColumnPropNameInTable="VehiculoColumn" msprop:Generator_UserColumnName="Vehiculo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Placa" msprop:Generator_ColumnVarNameInTable="columnPlaca" msprop:Generator_ColumnPropNameInRow="Placa" msprop:Generator_ColumnPropNameInTable="PlacaColumn" msprop:Generator_UserColumnName="Placa" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="11" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Humedad" msprop:Generator_ColumnVarNameInTable="columnHumedad" msprop:Generator_ColumnPropNameInRow="Humedad" msprop:Generator_ColumnPropNameInTable="HumedadColumn" msprop:Generator_UserColumnName="Humedad" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Impureza" msprop:Generator_ColumnVarNameInTable="columnImpureza" msprop:Generator_ColumnPropNameInRow="Impureza" msprop:Generator_ColumnPropNameInTable="ImpurezaColumn" msprop:Generator_UserColumnName="Impureza" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PesoEntradaKg" msprop:Generator_ColumnVarNameInTable="columnPesoEntradaKg" msprop:Generator_ColumnPropNameInRow="PesoEntradaKg" msprop:Generator_ColumnPropNameInTable="PesoEntradaKgColumn" msprop:Generator_UserColumnName="PesoEntradaKg" type="xs:int" minOccurs="0" />
+              <xs:element name="PesoEntradaQQ" msprop:Generator_ColumnVarNameInTable="columnPesoEntradaQQ" msprop:Generator_ColumnPropNameInRow="PesoEntradaQQ" msprop:Generator_ColumnPropNameInTable="PesoEntradaQQColumn" msprop:Generator_UserColumnName="PesoEntradaQQ" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Fecha" msprop:Generator_ColumnVarNameInTable="columnFecha" msprop:Generator_ColumnPropNameInRow="Fecha" msprop:Generator_ColumnPropNameInTable="FechaColumn" msprop:Generator_UserColumnName="Fecha" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="BusquedaSalida" msprop:Generator_TableClassName="BusquedaSalidaDataTable" msprop:Generator_TableVarName="tableBusquedaSalida" msprop:Generator_TablePropName="BusquedaSalida" msprop:Generator_RowDeletingName="BusquedaSalidaRowDeleting" msprop:Generator_RowChangingName="BusquedaSalidaRowChanging" msprop:Generator_RowEvHandlerName="BusquedaSalidaRowChangeEventHandler" msprop:Generator_RowDeletedName="BusquedaSalidaRowDeleted" msprop:Generator_UserTableName="BusquedaSalida" msprop:Generator_RowChangedName="BusquedaSalidaRowChanged" msprop:Generator_RowEvArgName="BusquedaSalidaRowChangeEvent" msprop:Generator_RowClassName="BusquedaSalidaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IdBoletoDetalle" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnIdBoletoDetalle" msprop:Generator_ColumnPropNameInRow="IdBoletoDetalle" msprop:Generator_ColumnPropNameInTable="IdBoletoDetalleColumn" msprop:Generator_UserColumnName="IdBoletoDetalle" type="xs:int" />
+              <xs:element name="Cod" msprop:Generator_ColumnVarNameInTable="columnCod" msprop:Generator_ColumnPropNameInRow="Cod" msprop:Generator_ColumnPropNameInTable="CodColumn" msprop:Generator_UserColumnName="Cod" type="xs:int" minOccurs="0" />
+              <xs:element name="Producto" msprop:Generator_ColumnVarNameInTable="columnProducto" msprop:Generator_ColumnPropNameInRow="Producto" msprop:Generator_ColumnPropNameInTable="ProductoColumn" msprop:Generator_UserColumnName="Producto" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Nombre" msprop:Generator_ColumnVarNameInTable="columnNombre" msprop:Generator_ColumnPropNameInRow="Nombre" msprop:Generator_ColumnPropNameInTable="NombreColumn" msprop:Generator_UserColumnName="Nombre" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Ci" msprop:Generator_ColumnVarNameInTable="columnCi" msprop:Generator_ColumnPropNameInRow="Ci" msprop:Generator_ColumnPropNameInTable="CiColumn" msprop:Generator_UserColumnName="Ci" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Vehiculo" msprop:Generator_ColumnVarNameInTable="columnVehiculo" msprop:Generator_ColumnPropNameInRow="Vehiculo" msprop:Generator_ColumnPropNameInTable="VehiculoColumn" msprop:Generator_UserColumnName="Vehiculo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Placa" msprop:Generator_ColumnVarNameInTable="columnPlaca" msprop:Generator_ColumnPropNameInRow="Placa" msprop:Generator_ColumnPropNameInTable="PlacaColumn" msprop:Generator_UserColumnName="Placa" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="11" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Humedad" msprop:Generator_ColumnVarNameInTable="columnHumedad" msprop:Generator_ColumnPropNameInRow="Humedad" msprop:Generator_ColumnPropNameInTable="HumedadColumn" msprop:Generator_UserColumnName="Humedad" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Impureza" msprop:Generator_ColumnVarNameInTable="columnImpureza" msprop:Generator_ColumnPropNameInRow="Impureza" msprop:Generator_ColumnPropNameInTable="ImpurezaColumn" msprop:Generator_UserColumnName="Impureza" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PesoEntradaKg" msprop:Generator_ColumnVarNameInTable="columnPesoEntradaKg" msprop:Generator_ColumnPropNameInRow="PesoEntradaKg" msprop:Generator_ColumnPropNameInTable="PesoEntradaKgColumn" msprop:Generator_UserColumnName="PesoEntradaKg" type="xs:int" minOccurs="0" />
+              <xs:element name="PesoEntradaQQ" msprop:Generator_ColumnVarNameInTable="columnPesoEntradaQQ" msprop:Generator_ColumnPropNameInRow="PesoEntradaQQ" msprop:Generator_ColumnPropNameInTable="PesoEntradaQQColumn" msprop:Generator_UserColumnName="PesoEntradaQQ" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PesoSalidaKg" msprop:Generator_ColumnVarNameInTable="columnPesoSalidaKg" msprop:Generator_ColumnPropNameInRow="PesoSalidaKg" msprop:Generator_ColumnPropNameInTable="PesoSalidaKgColumn" msprop:Generator_UserColumnName="PesoSalidaKg" type="xs:int" minOccurs="0" />
+              <xs:element name="PesoSalidaQQ" msprop:Generator_ColumnVarNameInTable="columnPesoSalidaQQ" msprop:Generator_ColumnPropNameInRow="PesoSalidaQQ" msprop:Generator_ColumnPropNameInTable="PesoSalidaQQColumn" msprop:Generator_UserColumnName="PesoSalidaQQ" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:BusquedaEntrada" />
+      <xs:field xpath="mstns:IdBoletoDetalle" />
+    </xs:unique>
+    <xs:unique name="BusquedaSalida_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:BusquedaSalida" />
+      <xs:field xpath="mstns:IdBoletoDetalle" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

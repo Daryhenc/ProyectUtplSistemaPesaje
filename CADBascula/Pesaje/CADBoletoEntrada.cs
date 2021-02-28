@@ -13,7 +13,7 @@ namespace CADBascula.Pesaje
         BoletoEntradaTableAdapter adapter = new BoletoEntradaTableAdapter();
         public void InsertBoletoEntrada(int IDBoletoDetalle, int PesoEntradaKg, decimal PesoEntradaQQ)
         {
-            adapter.InsertBoletoEntrada(IDBoletoDetalle, PesoEntradaKg, PesoEntradaQQ);
+             adapter.InsertBoletoEntrada(IDBoletoDetalle, PesoEntradaKg, PesoEntradaQQ);
         }
 
 

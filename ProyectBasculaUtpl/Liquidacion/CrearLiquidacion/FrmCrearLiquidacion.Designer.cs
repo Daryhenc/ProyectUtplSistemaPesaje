@@ -30,7 +30,9 @@ namespace ProyectBasculaUtpl.Liquidacion.CrearLiquidacion
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.BtnBuscar = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -52,16 +54,14 @@ namespace ProyectBasculaUtpl.Liquidacion.CrearLiquidacion
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
+            this.TxtVPagar = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.TxtPrecio = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.TxtPesoPagar = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.BtnGuardar = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.BtnBuscar = new System.Windows.Forms.Button();
-            this.label12 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -77,6 +77,17 @@ namespace ProyectBasculaUtpl.Liquidacion.CrearLiquidacion
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1267, 57);
             this.panel1.TabIndex = 0;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label7.Location = new System.Drawing.Point(102, 16);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(215, 24);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "CREAR LIQUIDACION";
             // 
             // panel2
             // 
@@ -106,6 +117,17 @@ namespace ProyectBasculaUtpl.Liquidacion.CrearLiquidacion
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1267, 322);
             this.panel2.TabIndex = 1;
+            // 
+            // BtnBuscar
+            // 
+            this.BtnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnBuscar.Location = new System.Drawing.Point(106, 33);
+            this.BtnBuscar.Name = "BtnBuscar";
+            this.BtnBuscar.Size = new System.Drawing.Size(89, 51);
+            this.BtnBuscar.TabIndex = 22;
+            this.BtnBuscar.Text = "BUSCAR";
+            this.BtnBuscar.UseVisualStyleBackColor = true;
+            this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
             // 
             // label11
             // 
@@ -300,16 +322,74 @@ namespace ProyectBasculaUtpl.Liquidacion.CrearLiquidacion
             // panel3
             // 
             this.panel3.Controls.Add(this.label14);
-            this.panel3.Controls.Add(this.textBox12);
+            this.panel3.Controls.Add(this.TxtVPagar);
             this.panel3.Controls.Add(this.label13);
-            this.panel3.Controls.Add(this.textBox11);
+            this.panel3.Controls.Add(this.TxtPrecio);
             this.panel3.Controls.Add(this.label12);
-            this.panel3.Controls.Add(this.textBox7);
+            this.panel3.Controls.Add(this.TxtPesoPagar);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 379);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1267, 302);
             this.panel3.TabIndex = 2;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(776, 107);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(182, 25);
+            this.label14.TabIndex = 28;
+            this.label14.Text = "VALOR A PAGAR";
+            // 
+            // TxtVPagar
+            // 
+            this.TxtVPagar.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtVPagar.Location = new System.Drawing.Point(774, 134);
+            this.TxtVPagar.Name = "TxtVPagar";
+            this.TxtVPagar.ReadOnly = true;
+            this.TxtVPagar.Size = new System.Drawing.Size(200, 44);
+            this.TxtVPagar.TabIndex = 27;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(501, 107);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(91, 25);
+            this.label13.TabIndex = 26;
+            this.label13.Text = "PRECIO";
+            // 
+            // TxtPrecio
+            // 
+            this.TxtPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtPrecio.Location = new System.Drawing.Point(499, 134);
+            this.TxtPrecio.Name = "TxtPrecio";
+            this.TxtPrecio.ReadOnly = true;
+            this.TxtPrecio.Size = new System.Drawing.Size(200, 44);
+            this.TxtPrecio.TabIndex = 25;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(227, 107);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(169, 25);
+            this.label12.TabIndex = 24;
+            this.label12.Text = "PESO A PAGAR";
+            // 
+            // TxtPesoPagar
+            // 
+            this.TxtPesoPagar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TxtPesoPagar.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtPesoPagar.Location = new System.Drawing.Point(225, 134);
+            this.TxtPesoPagar.Name = "TxtPesoPagar";
+            this.TxtPesoPagar.ReadOnly = true;
+            this.TxtPesoPagar.Size = new System.Drawing.Size(200, 44);
+            this.TxtPesoPagar.TabIndex = 23;
             // 
             // panel4
             // 
@@ -334,85 +414,6 @@ namespace ProyectBasculaUtpl.Liquidacion.CrearLiquidacion
             this.BtnGuardar.TabIndex = 0;
             this.BtnGuardar.Text = "GUARDAR";
             this.BtnGuardar.UseVisualStyleBackColor = false;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label7.Location = new System.Drawing.Point(102, 16);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(215, 24);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "CREAR LIQUIDACION";
-            // 
-            // BtnBuscar
-            // 
-            this.BtnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnBuscar.Location = new System.Drawing.Point(106, 33);
-            this.BtnBuscar.Name = "BtnBuscar";
-            this.BtnBuscar.Size = new System.Drawing.Size(89, 51);
-            this.BtnBuscar.TabIndex = 22;
-            this.BtnBuscar.Text = "BUSCAR";
-            this.BtnBuscar.UseVisualStyleBackColor = true;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(227, 107);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(169, 25);
-            this.label12.TabIndex = 24;
-            this.label12.Text = "PESO A PAGAR";
-            // 
-            // textBox7
-            // 
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(225, 134);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.ReadOnly = true;
-            this.textBox7.Size = new System.Drawing.Size(200, 44);
-            this.textBox7.TabIndex = 23;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(501, 107);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(91, 25);
-            this.label13.TabIndex = 26;
-            this.label13.Text = "PRECIO";
-            // 
-            // textBox11
-            // 
-            this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox11.Location = new System.Drawing.Point(499, 134);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.ReadOnly = true;
-            this.textBox11.Size = new System.Drawing.Size(200, 44);
-            this.textBox11.TabIndex = 25;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(776, 107);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(182, 25);
-            this.label14.TabIndex = 28;
-            this.label14.Text = "VALOR A PAGAR";
-            // 
-            // textBox12
-            // 
-            this.textBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox12.Location = new System.Drawing.Point(774, 134);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.ReadOnly = true;
-            this.textBox12.Size = new System.Drawing.Size(200, 44);
-            this.textBox12.TabIndex = 27;
             // 
             // FrmCrearLiquidacion
             // 
@@ -468,10 +469,10 @@ namespace ProyectBasculaUtpl.Liquidacion.CrearLiquidacion
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button BtnBuscar;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox TxtVPagar;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox TxtPrecio;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox TxtPesoPagar;
     }
 }

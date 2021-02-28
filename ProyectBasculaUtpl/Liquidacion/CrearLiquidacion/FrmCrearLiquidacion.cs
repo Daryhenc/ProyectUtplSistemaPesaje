@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProyectBasculaUtpl.Liquidacion.CrearLiquidacion
@@ -16,6 +9,29 @@ namespace ProyectBasculaUtpl.Liquidacion.CrearLiquidacion
         {
             InitializeComponent();
         }
+        
+        ClassDatoSalida DatoSalida = new ClassDatoSalida();
+        private void BtnBuscar_Click(object sender, EventArgs e)
+        {
 
+            FrmBusquedaSalida FrmBSalida = new FrmBusquedaSalida();
+            FrmBSalida.ShowDialog();
+            if (FrmBSalida.Estado == true)
+            {
+                DatoSalida.IdBoletoDetalle = FrmBSalida.Dato.IdBoletoDetalle;
+                DatoSalida.Cod = FrmBSalida.Dato.Cod;
+                DatoSalida.Producto = FrmBSalida.Dato.Producto;
+                DatoSalida.Nombre = FrmBSalida.Dato.Nombre;
+                DatoSalida.Ci = FrmBSalida.Dato.Ci;
+                DatoSalida.Vehiculo = FrmBSalida.Dato.Vehiculo;
+                DatoSalida.Placa = FrmBSalida.Dato.Placa;
+                DatoSalida.Humedad = FrmBSalida.Dato.Humedad;
+                DatoSalida.Impureza = FrmBSalida.Dato.Impureza;
+                DatoSalida.PesoEntradaKg = FrmBSalida.Dato.PesoEntradaKg;
+                DatoSalida.PesoEntradaQQ = FrmBSalida.Dato.PesoEntradaQQ;
+                DatoSalida.PesoSalidaKg = FrmBSalida.Dato.PesoSalidaKg;
+                DatoSalida.PesoSalidaQQ = FrmBSalida.Dato.PesoSalidaQQ;
+            }
+        }
     }
 }

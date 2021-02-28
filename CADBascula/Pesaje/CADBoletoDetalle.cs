@@ -1,9 +1,5 @@
 ﻿using CADBascula.Pesaje.DSPesajeTableAdapters;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CADBascula.Pesaje
 {
@@ -11,9 +7,9 @@ namespace CADBascula.Pesaje
     {
 
         BoletoDetalleTableAdapter adapter = new BoletoDetalleTableAdapter();
-        public void InsertBoletoDetalle(int IDCliente, int IDProducto, int Cod, string Vehiculo, string Placa, decimal Humedad, decimal Impureza)
+        public int InsertBoletoDetalle(int IDCliente, int IDProducto, int Cod, string Vehiculo, string Placa, decimal Humedad, decimal Impureza)
         {
-            adapter.InsertBoletoDetalle(IDCliente, IDProducto, Cod, Vehiculo, Placa, Humedad, Impureza);
+            return Convert.ToInt32(adapter.InsertBoletoDetalle(IDCliente, IDProducto, Cod, Vehiculo, Placa, Humedad, Impureza));
         }
 
         /*

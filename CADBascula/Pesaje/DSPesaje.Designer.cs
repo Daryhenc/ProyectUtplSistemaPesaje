@@ -2503,7 +2503,7 @@ SELECT IdBoletoDetalle, IDCliente, IDProducto, Cod, Vehiculo, Placa, Humedad, Im
             this._commandCollection[1].Connection = this.Connection;
             this._commandCollection[1].CommandText = "INSERT INTO [dbo].[BoletoDetalle] ([IDCliente], [IDProducto], [Cod], [Vehiculo], " +
                 "[Placa], [Humedad], [Impureza]) VALUES (@IDCliente, @IDProducto, @Cod, @Vehiculo" +
-                ", @Placa, @Humedad, @Impureza);\r\n";
+                ", @Placa, @Humedad, @Impureza);\r\nSELECT SCOPE_IDENTITY()";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IDCliente", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "IDCliente", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IDProducto", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "IDProducto", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -2857,7 +2857,7 @@ SELECT IdBoletoDetalle, IDCliente, IDProducto, Cod, Vehiculo, Placa, Humedad, Im
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
-        public virtual int InsertBoletoDetalle(global::System.Nullable<int> IDCliente, global::System.Nullable<int> IDProducto, global::System.Nullable<int> Cod, string Vehiculo, string Placa, global::System.Nullable<decimal> Humedad, global::System.Nullable<decimal> Impureza) {
+        public virtual object InsertBoletoDetalle(global::System.Nullable<int> IDCliente, global::System.Nullable<int> IDProducto, global::System.Nullable<int> Cod, string Vehiculo, string Placa, global::System.Nullable<decimal> Humedad, global::System.Nullable<decimal> Impureza) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
             if ((IDCliente.HasValue == true)) {
                 command.Parameters[0].Value = ((int)(IDCliente.Value));
@@ -2906,16 +2906,22 @@ SELECT IdBoletoDetalle, IDCliente, IDProducto, Cod, Vehiculo, Placa, Humedad, Im
                         != global::System.Data.ConnectionState.Open)) {
                 command.Connection.Open();
             }
-            int returnValue;
+            object returnValue;
             try {
-                returnValue = command.ExecuteNonQuery();
+                returnValue = command.ExecuteScalar();
             }
             finally {
                 if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
                     command.Connection.Close();
                 }
             }
-            return returnValue;
+            if (((returnValue == null) 
+                        || (returnValue.GetType() == typeof(global::System.DBNull)))) {
+                return null;
+            }
+            else {
+                return ((object)(returnValue));
+            }
         }
     }
     
@@ -3506,21 +3512,21 @@ SELECT IdBoletoDetalle, PesoSalidaKg, PesoSalidaQQ, Fecha FROM BoletoSalida WHER
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._boletoDetalleTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.BoletoDetalle.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._boletoDetalleTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             if ((this._boletoSalidaTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.BoletoSalida.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._boletoSalidaTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._boletoDetalleTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.BoletoDetalle.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._boletoDetalleTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -3542,19 +3548,19 @@ SELECT IdBoletoDetalle, PesoSalidaKg, PesoSalidaQQ, Fecha FROM BoletoSalida WHER
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._boletoDetalleTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.BoletoDetalle.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._boletoDetalleTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._boletoSalidaTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.BoletoSalida.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._boletoSalidaTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._boletoDetalleTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.BoletoDetalle.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._boletoDetalleTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -3568,19 +3574,19 @@ SELECT IdBoletoDetalle, PesoSalidaKg, PesoSalidaQQ, Fecha FROM BoletoSalida WHER
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private int UpdateDeletedRows(DSPesaje dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._boletoSalidaTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.BoletoSalida.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._boletoSalidaTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             if ((this._boletoDetalleTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.BoletoDetalle.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._boletoDetalleTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._boletoSalidaTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.BoletoSalida.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._boletoSalidaTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }

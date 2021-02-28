@@ -32,14 +32,9 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.BtnPesarEntrada = new System.Windows.Forms.Button();
             this.TxtPesoKG = new System.Windows.Forms.TextBox();
             this.TxtPesoQQ = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.Puerto_4 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.Puerto_3 = new System.Windows.Forms.RadioButton();
-            this.Puerto_1 = new System.Windows.Forms.RadioButton();
             this.TxtVehiculo = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -48,7 +43,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.TxtPlaca = new System.Windows.Forms.TextBox();
-            this.TxtCliente = new System.Windows.Forms.TextBox();
             this.TxtHumedad = new System.Windows.Forms.TextBox();
             this.TxtImpureza = new System.Windows.Forms.TextBox();
             this.CbProducto = new System.Windows.Forms.ComboBox();
@@ -57,6 +51,11 @@
             this.BtnProducto = new System.Windows.Forms.Button();
             this.BtnCliente = new System.Windows.Forms.Button();
             this.BtnGuardar = new System.Windows.Forms.Button();
+            this.BtnPesarEntrada = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.CbCliente = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.TxtCod = new System.Windows.Forms.TextBox();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -68,12 +67,11 @@
             this.panel3.BackColor = System.Drawing.Color.SteelBlue;
             this.panel3.Controls.Add(this.label11);
             this.panel3.Controls.Add(this.label20);
-            this.panel3.Controls.Add(this.BtnPesarEntrada);
             this.panel3.Controls.Add(this.TxtPesoKG);
             this.panel3.Controls.Add(this.TxtPesoQQ);
-            this.panel3.Location = new System.Drawing.Point(23, 127);
+            this.panel3.Location = new System.Drawing.Point(9, 106);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1223, 220);
+            this.panel3.Size = new System.Drawing.Size(1250, 271);
             this.panel3.TabIndex = 12;
             // 
             // label11
@@ -81,7 +79,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.label11.Location = new System.Drawing.Point(805, 17);
+            this.label11.Location = new System.Drawing.Point(1047, 28);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(95, 55);
             this.label11.TabIndex = 98;
@@ -92,39 +90,21 @@
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.label20.Location = new System.Drawing.Point(376, 17);
+            this.label20.Location = new System.Drawing.Point(426, 28);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(100, 55);
             this.label20.TabIndex = 97;
             this.label20.Text = "QQ";
             // 
-            // BtnPesarEntrada
-            // 
-            this.BtnPesarEntrada.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.BtnPesarEntrada.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnPesarEntrada.BackgroundImage")));
-            this.BtnPesarEntrada.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.BtnPesarEntrada.FlatAppearance.BorderColor = System.Drawing.SystemColors.HotTrack;
-            this.BtnPesarEntrada.FlatAppearance.BorderSize = 3;
-            this.BtnPesarEntrada.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnPesarEntrada.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnPesarEntrada.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.BtnPesarEntrada.Location = new System.Drawing.Point(47, 42);
-            this.BtnPesarEntrada.Name = "BtnPesarEntrada";
-            this.BtnPesarEntrada.Size = new System.Drawing.Size(137, 137);
-            this.BtnPesarEntrada.TabIndex = 1;
-            this.BtnPesarEntrada.Text = "PESAR";
-            this.BtnPesarEntrada.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.BtnPesarEntrada.UseVisualStyleBackColor = false;
-            // 
             // TxtPesoKG
             // 
             this.TxtPesoKG.BackColor = System.Drawing.SystemColors.InfoText;
             this.TxtPesoKG.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TxtPesoKG.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtPesoKG.Font = new System.Drawing.Font("Microsoft Sans Serif", 90F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtPesoKG.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.TxtPesoKG.Location = new System.Drawing.Point(805, 74);
+            this.TxtPesoKG.Location = new System.Drawing.Point(673, 86);
             this.TxtPesoKG.Name = "TxtPesoKG";
-            this.TxtPesoKG.Size = new System.Drawing.Size(398, 116);
+            this.TxtPesoKG.Size = new System.Drawing.Size(469, 143);
             this.TxtPesoKG.TabIndex = 1;
             this.TxtPesoKG.Text = "0";
             this.TxtPesoKG.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -133,11 +113,11 @@
             // 
             this.TxtPesoQQ.BackColor = System.Drawing.SystemColors.InfoText;
             this.TxtPesoQQ.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TxtPesoQQ.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtPesoQQ.Font = new System.Drawing.Font("Microsoft Sans Serif", 90F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtPesoQQ.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.TxtPesoQQ.Location = new System.Drawing.Point(374, 74);
+            this.TxtPesoQQ.Location = new System.Drawing.Point(61, 86);
             this.TxtPesoQQ.Name = "TxtPesoQQ";
-            this.TxtPesoQQ.Size = new System.Drawing.Size(398, 116);
+            this.TxtPesoQQ.Size = new System.Drawing.Size(469, 143);
             this.TxtPesoQQ.TabIndex = 0;
             this.TxtPesoQQ.Text = "0";
             this.TxtPesoQQ.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -145,72 +125,12 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.SteelBlue;
-            this.panel2.Controls.Add(this.Puerto_4);
-            this.panel2.Controls.Add(this.radioButton1);
-            this.panel2.Controls.Add(this.Puerto_3);
-            this.panel2.Controls.Add(this.Puerto_1);
-            this.panel2.Location = new System.Drawing.Point(23, 23);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.BtnPesarEntrada);
+            this.panel2.Location = new System.Drawing.Point(9, 8);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1223, 77);
+            this.panel2.Size = new System.Drawing.Size(1250, 92);
             this.panel2.TabIndex = 271;
-            // 
-            // Puerto_4
-            // 
-            this.Puerto_4.AutoSize = true;
-            this.Puerto_4.BackColor = System.Drawing.Color.Transparent;
-            this.Puerto_4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Puerto_4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Puerto_4.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.Puerto_4.Location = new System.Drawing.Point(939, 22);
-            this.Puerto_4.Name = "Puerto_4";
-            this.Puerto_4.Size = new System.Drawing.Size(233, 33);
-            this.Puerto_4.TabIndex = 4;
-            this.Puerto_4.Text = "BASCULA COM 4";
-            this.Puerto_4.UseVisualStyleBackColor = false;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.BackColor = System.Drawing.Color.Transparent;
-            this.radioButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.radioButton1.Location = new System.Drawing.Point(340, 22);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(233, 33);
-            this.radioButton1.TabIndex = 3;
-            this.radioButton1.Text = "BASCULA COM 2";
-            this.radioButton1.UseVisualStyleBackColor = false;
-            // 
-            // Puerto_3
-            // 
-            this.Puerto_3.AutoSize = true;
-            this.Puerto_3.BackColor = System.Drawing.Color.Transparent;
-            this.Puerto_3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Puerto_3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Puerto_3.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.Puerto_3.Location = new System.Drawing.Point(634, 22);
-            this.Puerto_3.Name = "Puerto_3";
-            this.Puerto_3.Size = new System.Drawing.Size(233, 33);
-            this.Puerto_3.TabIndex = 2;
-            this.Puerto_3.Text = "BASCULA COM 3";
-            this.Puerto_3.UseVisualStyleBackColor = false;
-            // 
-            // Puerto_1
-            // 
-            this.Puerto_1.AutoSize = true;
-            this.Puerto_1.BackColor = System.Drawing.Color.Transparent;
-            this.Puerto_1.Checked = true;
-            this.Puerto_1.FlatAppearance.BorderSize = 3;
-            this.Puerto_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Puerto_1.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.Puerto_1.Location = new System.Drawing.Point(65, 22);
-            this.Puerto_1.Name = "Puerto_1";
-            this.Puerto_1.Size = new System.Drawing.Size(234, 33);
-            this.Puerto_1.TabIndex = 1;
-            this.Puerto_1.TabStop = true;
-            this.Puerto_1.Text = "BASCULA COM 1";
-            this.Puerto_1.UseVisualStyleBackColor = false;
             // 
             // TxtVehiculo
             // 
@@ -219,7 +139,7 @@
             this.TxtVehiculo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtVehiculo.Location = new System.Drawing.Point(20, 138);
             this.TxtVehiculo.Name = "TxtVehiculo";
-            this.TxtVehiculo.Size = new System.Drawing.Size(510, 35);
+            this.TxtVehiculo.Size = new System.Drawing.Size(475, 35);
             this.TxtVehiculo.TabIndex = 274;
             // 
             // label6
@@ -227,7 +147,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.label6.Location = new System.Drawing.Point(1037, 106);
+            this.label6.Location = new System.Drawing.Point(889, 105);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(155, 31);
             this.label6.TabIndex = 286;
@@ -238,7 +158,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.label2.Location = new System.Drawing.Point(584, 105);
+            this.label2.Location = new System.Drawing.Point(507, 105);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(103, 31);
             this.label2.TabIndex = 281;
@@ -260,7 +180,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.label7.Location = new System.Drawing.Point(818, 105);
+            this.label7.Location = new System.Drawing.Point(709, 105);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(152, 31);
             this.label7.TabIndex = 284;
@@ -282,7 +202,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.label3.Location = new System.Drawing.Point(584, 18);
+            this.label3.Location = new System.Drawing.Point(818, 21);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(171, 31);
             this.label3.TabIndex = 283;
@@ -292,43 +212,34 @@
             // 
             this.TxtPlaca.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TxtPlaca.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtPlaca.Location = new System.Drawing.Point(584, 138);
+            this.TxtPlaca.Location = new System.Drawing.Point(507, 138);
             this.TxtPlaca.Name = "TxtPlaca";
             this.TxtPlaca.Size = new System.Drawing.Size(188, 35);
             this.TxtPlaca.TabIndex = 275;
-            // 
-            // TxtCliente
-            // 
-            this.TxtCliente.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.TxtCliente.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.TxtCliente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TxtCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtCliente.Location = new System.Drawing.Point(20, 54);
-            this.TxtCliente.Name = "TxtCliente";
-            this.TxtCliente.Size = new System.Drawing.Size(510, 35);
-            this.TxtCliente.TabIndex = 273;
             // 
             // TxtHumedad
             // 
             this.TxtHumedad.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TxtHumedad.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtHumedad.Location = new System.Drawing.Point(818, 138);
+            this.TxtHumedad.Location = new System.Drawing.Point(709, 138);
             this.TxtHumedad.Name = "TxtHumedad";
             this.TxtHumedad.Size = new System.Drawing.Size(166, 35);
             this.TxtHumedad.TabIndex = 277;
             this.TxtHumedad.Text = "0";
             this.TxtHumedad.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtHumedad.Leave += new System.EventHandler(this.TxtHumedad_Leave);
             // 
             // TxtImpureza
             // 
             this.TxtImpureza.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TxtImpureza.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtImpureza.Location = new System.Drawing.Point(1037, 139);
+            this.TxtImpureza.Location = new System.Drawing.Point(889, 138);
             this.TxtImpureza.Name = "TxtImpureza";
             this.TxtImpureza.Size = new System.Drawing.Size(166, 35);
             this.TxtImpureza.TabIndex = 278;
-            this.TxtImpureza.Text = "1";
+            this.TxtImpureza.Text = "0";
             this.TxtImpureza.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtImpureza.Leave += new System.EventHandler(this.TxtImpureza_Leave);
             // 
             // CbProducto
             // 
@@ -337,16 +248,18 @@
             this.CbProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CbProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CbProducto.FormattingEnabled = true;
-            this.CbProducto.Location = new System.Drawing.Point(584, 52);
+            this.CbProducto.Location = new System.Drawing.Point(818, 55);
             this.CbProducto.Name = "CbProducto";
-            this.CbProducto.Size = new System.Drawing.Size(400, 37);
+            this.CbProducto.Size = new System.Drawing.Size(385, 37);
             this.CbProducto.TabIndex = 276;
             this.CbProducto.ValueMember = "IDProducto";
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.SteelBlue;
-            this.panel1.Controls.Add(this.TxtCliente);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.TxtCod);
+            this.panel1.Controls.Add(this.CbCliente);
             this.panel1.Controls.Add(this.TxtVehiculo);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.label4);
@@ -358,9 +271,9 @@
             this.panel1.Controls.Add(this.TxtImpureza);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.TxtHumedad);
-            this.panel1.Location = new System.Drawing.Point(23, 381);
+            this.panel1.Location = new System.Drawing.Point(9, 383);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1223, 220);
+            this.panel1.Size = new System.Drawing.Size(1250, 255);
             this.panel1.TabIndex = 99;
             // 
             // panelBotones
@@ -431,6 +344,72 @@
             this.BtnGuardar.Text = "GUARDAR";
             this.BtnGuardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BtnGuardar.UseVisualStyleBackColor = false;
+            this.BtnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
+            // 
+            // BtnPesarEntrada
+            // 
+            this.BtnPesarEntrada.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BtnPesarEntrada.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnPesarEntrada.BackgroundImage")));
+            this.BtnPesarEntrada.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BtnPesarEntrada.Dock = System.Windows.Forms.DockStyle.Left;
+            this.BtnPesarEntrada.FlatAppearance.BorderColor = System.Drawing.SystemColors.HotTrack;
+            this.BtnPesarEntrada.FlatAppearance.BorderSize = 3;
+            this.BtnPesarEntrada.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnPesarEntrada.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnPesarEntrada.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.BtnPesarEntrada.Location = new System.Drawing.Point(0, 0);
+            this.BtnPesarEntrada.Name = "BtnPesarEntrada";
+            this.BtnPesarEntrada.Size = new System.Drawing.Size(114, 92);
+            this.BtnPesarEntrada.TabIndex = 2;
+            this.BtnPesarEntrada.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BtnPesarEntrada.UseVisualStyleBackColor = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.label1.Location = new System.Drawing.Point(768, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(435, 55);
+            this.label1.TabIndex = 289;
+            this.label1.Text = "PESO DE SALIDA";
+            // 
+            // CbCliente
+            // 
+            this.CbCliente.DisplayMember = "IDProducto";
+            this.CbCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CbCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CbCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CbCliente.FormattingEnabled = true;
+            this.CbCliente.Location = new System.Drawing.Point(20, 55);
+            this.CbCliente.Name = "CbCliente";
+            this.CbCliente.Size = new System.Drawing.Size(775, 37);
+            this.CbCliente.TabIndex = 287;
+            this.CbCliente.ValueMember = "IDProducto";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.label5.Location = new System.Drawing.Point(1070, 105);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(75, 31);
+            this.label5.TabIndex = 289;
+            this.label5.Text = "COD";
+            // 
+            // TxtCod
+            // 
+            this.TxtCod.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TxtCod.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtCod.Location = new System.Drawing.Point(1070, 138);
+            this.TxtCod.Name = "TxtCod";
+            this.TxtCod.Size = new System.Drawing.Size(133, 35);
+            this.TxtCod.TabIndex = 288;
+            this.TxtCod.Text = "0";
+            this.TxtCod.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtCod.Leave += new System.EventHandler(this.TxtCod_Leave);
             // 
             // FrmPesajeEntrada
             // 
@@ -464,9 +443,6 @@
         private System.Windows.Forms.TextBox TxtPesoKG;
         private System.Windows.Forms.TextBox TxtPesoQQ;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton Puerto_3;
-        private System.Windows.Forms.RadioButton Puerto_1;
         private System.Windows.Forms.TextBox TxtVehiculo;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label2;
@@ -475,16 +451,18 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox TxtPlaca;
-        private System.Windows.Forms.TextBox TxtCliente;
         private System.Windows.Forms.TextBox TxtHumedad;
         private System.Windows.Forms.TextBox TxtImpureza;
         private System.Windows.Forms.ComboBox CbProducto;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panelBotones;
         private System.Windows.Forms.Button BtnCliente;
-        private System.Windows.Forms.Button BtnPesarEntrada;
         private System.Windows.Forms.Button BtnGuardar;
         private System.Windows.Forms.Button BtnProducto;
-        private System.Windows.Forms.RadioButton Puerto_4;
+        private System.Windows.Forms.Button BtnPesarEntrada;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox TxtCod;
+        private System.Windows.Forms.ComboBox CbCliente;
     }
 }

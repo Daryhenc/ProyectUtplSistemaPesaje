@@ -57,6 +57,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Buscar\ClassDgvLlenarBusquedaEntrada.cs" />
+    <Compile Include="Buscar\ClassDgvLlenarBusquedaSalida.cs" />
+    <Compile Include="Buscar\DSBusquedas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSBusquedas.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Cliente\CADCliente.cs" />
     <Compile Include="Cliente\ClassDgvLlenarCliente.cs" />
     <Compile Include="Cliente\DSCliente.Designer.cs">
@@ -67,6 +74,7 @@
     <Compile Include="Pesaje\CADBoletoDetalle.cs" />
     <Compile Include="Pesaje\CADBoletoEntrada.cs" />
     <Compile Include="Pesaje\CADBoletoSalida.cs" />
+    <Compile Include="Pesaje\CADGuardarEntrada.cs" />
     <Compile Include="Pesaje\DSPesaje.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -110,6 +118,17 @@
   <ItemGroup />
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="Buscar\DSBusquedas.xsc">
+      <DependentUpon>DSBusquedas.xsd</DependentUpon>
+    </None>
+    <None Include="Buscar\DSBusquedas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSBusquedas.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Buscar\DSBusquedas.xss">
+      <DependentUpon>DSBusquedas.xsd</DependentUpon>
+    </None>
     <None Include="Cliente\DSCliente.xsc">
       <DependentUpon>DSCliente.xsd</DependentUpon>
     </None>
