@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ProyectBasculaUtpl.Liquidacion.CrearLiquidacion;
+using ProyectBasculaUtpl.Liquidacion.ReporteLiquidacion;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -36,7 +38,12 @@ namespace ProyectBasculaUtpl.Liquidacion
 
         private void BtnLiquidar_Click(object sender, EventArgs e)
         {
-          //  AbrirFormulario(new FrmPesajeEntrada());
+            AbrirFormulario(new FrmCrearLiquidacion());
+        }
+
+        private void BtnReporte_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(new FrmReporteLiquidacion());
         }
     }
 }

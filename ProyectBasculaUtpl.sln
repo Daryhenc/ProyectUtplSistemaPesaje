@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProyectBasculaUtpl", "Proye
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CADBascula", "CADBascula\CADBascula.csproj", "{B739B16D-7FE2-4EDE-9483-511A765F0D50}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReporteBascula", "ReporteBascula\ReporteBascula.csproj", "{03A8D8CE-E3E0-4827-B0B9-FF4B2AD42F7B}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SetupSistemaPesaje", "SetupSistemaPesaje\SetupSistemaPesaje.vdproj", "{C6699EEF-4348-4631-8B3D-90420EFBA3CF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,12 @@ Global
 		{B739B16D-7FE2-4EDE-9483-511A765F0D50}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B739B16D-7FE2-4EDE-9483-511A765F0D50}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B739B16D-7FE2-4EDE-9483-511A765F0D50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03A8D8CE-E3E0-4827-B0B9-FF4B2AD42F7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03A8D8CE-E3E0-4827-B0B9-FF4B2AD42F7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03A8D8CE-E3E0-4827-B0B9-FF4B2AD42F7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03A8D8CE-E3E0-4827-B0B9-FF4B2AD42F7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6699EEF-4348-4631-8B3D-90420EFBA3CF}.Debug|Any CPU.ActiveCfg = Debug
+		{C6699EEF-4348-4631-8B3D-90420EFBA3CF}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

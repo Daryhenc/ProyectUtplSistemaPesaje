@@ -90,5 +90,10 @@ namespace ProyectBasculaUtpl.Varios.Cliente
                 return;
             }
         }
+
+        private void BtnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

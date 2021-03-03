@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CADBascula.Buscar;
+using System;
 using System.Windows.Forms;
 
 namespace ProyectBasculaUtpl.Pesaje.Salida
@@ -8,7 +9,11 @@ namespace ProyectBasculaUtpl.Pesaje.Salida
         public FrmBusquedaEntrada()
         {
             InitializeComponent();
+            LlenarBusqueda = new ClassDgvLlenarBusquedaEntrada();
+            LlenarBusqueda.TraerBoletoEntrada(dgvDato);
         }
+
+        ClassDgvLlenarBusquedaEntrada LlenarBusqueda { get; set; }
 
         public ClassDatoEntrada Dato = new ClassDatoEntrada();
         public bool Estado;
@@ -29,7 +34,7 @@ namespace ProyectBasculaUtpl.Pesaje.Salida
             {
                
                 int fila = Convert.ToInt32(dgvDato.CurrentRow.Index);
-                Dato.IdBoletoDetalle = dgvDato.Rows[fila].Cells[0].Value.ToString();
+                Dato.IdBoletoDetalle = Convert.ToInt32(dgvDato.Rows[fila].Cells[0].Value);
                 Dato.Cod = dgvDato.Rows[fila].Cells[1].Value.ToString();
                 Dato.Producto = dgvDato.Rows[fila].Cells[2].Value.ToString();
                 Dato.Nombre = dgvDato.Rows[fila].Cells[3].Value.ToString();

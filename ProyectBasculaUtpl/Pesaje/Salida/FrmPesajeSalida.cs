@@ -1,4 +1,5 @@
 ﻿using CADBascula.Pesaje;
+using ProyectBasculaUtpl.Peso;
 using System;
 using System.Windows.Forms;
 
@@ -11,6 +12,51 @@ namespace ProyectBasculaUtpl.Pesaje.Salida
             InitializeComponent();
         }
         ClassDatoEntrada DatoEntrada = new ClassDatoEntrada();
+        ClassCapturaPeso PesoCapturar { get; set; }
+
+
+        private void Limpiar()
+        {
+            DatoEntrada.IdBoletoDetalle = 0;
+            DatoEntrada.Cod = null;
+            DatoEntrada.Producto = null;
+            DatoEntrada.Nombre = null;
+            DatoEntrada.Ci = null;
+            DatoEntrada.Vehiculo = null;
+            DatoEntrada.Placa = null;
+            DatoEntrada.Humedad = null;
+            DatoEntrada.Impureza = null;
+            DatoEntrada.PesoEntradaKg = null;
+            DatoEntrada.PesoEntradaQQ = null;
+            DatoEntrada.Fecha = null;
+            TxtCliente.Text = null;
+            TxtProducto.Text = null;
+            TxtVehiculo.Text = null;
+            TxtPlaca.Text = null;
+            TxtHumedad.Text = null;
+            TxtImpureza.Text = null;
+        }
+
+        private void TxtPesoKG_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                Convert.ToInt32(TxtPesoKG.Text);
+                if (Convert.ToInt32(TxtPesoKG.Text) < 0)
+                {
+                    TxtPesoKG.Text = "0";
+                }
+                TxtPesoQQ.Text = (Convert.ToDouble(TxtPesoKG.Text) * 0.022).ToString();
+            }
+            catch (Exception)
+            {
+                TxtPesoKG.Text = "0";
+                TxtPesoQQ.Text = (Convert.ToDouble(TxtPesoKG.Text) * 0.022).ToString();
+            }
+        }
+
+        #region Botones
+
         private void BtnBuscar_Click(object sender, EventArgs e)
         {
             FrmBusquedaEntrada BEntrada = new FrmBusquedaEntrada();
@@ -29,9 +75,18 @@ namespace ProyectBasculaUtpl.Pesaje.Salida
                 DatoEntrada.PesoEntradaKg = BEntrada.Dato.PesoEntradaKg;
                 DatoEntrada.PesoEntradaQQ = BEntrada.Dato.PesoEntradaQQ;
                 DatoEntrada.Fecha = BEntrada.Dato.Fecha;
+                TxtCliente.Text = DatoEntrada.Nombre.ToUpper();
+                TxtProducto.Text = DatoEntrada.Producto.ToUpper();
+                TxtVehiculo.Text = DatoEntrada.Vehiculo.ToUpper();
+                TxtPlaca.Text = DatoEntrada.Placa.ToUpper();
+                TxtHumedad.Text = DatoEntrada.Humedad.ToUpper();
+                TxtImpureza.Text = DatoEntrada.Impureza.ToUpper();
+            }
+            else
+            {
+                Limpiar();
             }
         }
-
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
             if (Convert.ToInt32(DatoEntrada.IdBoletoDetalle) == 0)
@@ -39,10 +94,10 @@ namespace ProyectBasculaUtpl.Pesaje.Salida
                 MessageBox.Show("Debe buscar una entrada.", "ALTO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            if (Convert.ToDecimal(TxtPesoQQ.Text )== 0 )
+            if (Convert.ToDecimal(TxtPesoQQ.Text) == 0)
             {
-                MessageBox.Show("Debe ingresar el código.", "ALTO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                TxtPesoQQ.Focus();
+                MessageBox.Show("Debe obtener el peso de salida.", "ALTO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                BtnPesarSalida.Focus();
                 return;
             }
 
@@ -52,18 +107,25 @@ namespace ProyectBasculaUtpl.Pesaje.Salida
 
             CADBoletoSalida Guardar = new CADBoletoSalida();
 
-            
+
             Guardar.InsertBoletoSalida(Convert.ToInt32(DatoEntrada.IdBoletoDetalle), Convert.ToInt32(TxtPesoKG.Text), Convert.ToDecimal(TxtPesoQQ.Text));
 
             MessageBox.Show("Registro guardado correctamente.",
             "CONFIRMAR", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
-            TxtVehiculo.Text = null;
-            TxtPlaca.Text = null;
-            TxtHumedad.Text = "0";
-            TxtImpureza.Text = "0";
+            Limpiar();
 
         }
+        private void BtnPesarSalida_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Debe tener una bascula conectada al puerto COM1.", "ALTO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            // PesoCapturar = new ClassCapturaPeso();
+            // int PesoKG = Convert.ToInt32(PesoCapturar.Bascula(serialPort, "COM1"));
+        }
+
+        #endregion
+
+
     }
 }

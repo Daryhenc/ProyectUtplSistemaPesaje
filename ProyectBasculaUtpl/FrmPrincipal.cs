@@ -45,5 +45,10 @@ namespace ProyectBasculaUtpl
         {
             AbrirFormulario(new FrmMenuLiquidacion());
         }
+
+        private void Cerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

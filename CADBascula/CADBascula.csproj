@@ -66,6 +66,7 @@
     </Compile>
     <Compile Include="Cliente\CADCliente.cs" />
     <Compile Include="Cliente\ClassDgvLlenarCliente.cs" />
+    <Compile Include="Cliente\ClassLlenarCbCliente.cs" />
     <Compile Include="Cliente\DSCliente.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -75,6 +76,7 @@
     <Compile Include="Pesaje\CADBoletoEntrada.cs" />
     <Compile Include="Pesaje\CADBoletoSalida.cs" />
     <Compile Include="Pesaje\CADGuardarEntrada.cs" />
+    <Compile Include="Pesaje\CADLiquidacion.cs" />
     <Compile Include="Pesaje\DSPesaje.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -82,6 +84,7 @@
     </Compile>
     <Compile Include="Producto\CADProducto.cs" />
     <Compile Include="Producto\ClassDgvLlenarProduto.cs" />
+    <Compile Include="Producto\ClassLlenarCbProducto.cs" />
     <Compile Include="Producto\DSProducto.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -92,6 +95,13 @@
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte\CADDatoReporteCompra.cs" />
+    <Compile Include="Reporte\CADReporteCompra.cs" />
+    <Compile Include="Reporte\DSReporte.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSReporte.xsd</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -165,6 +175,17 @@
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reporte\DSReporte.xsc">
+      <DependentUpon>DSReporte.xsd</DependentUpon>
+    </None>
+    <None Include="Reporte\DSReporte.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSReporte.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reporte\DSReporte.xss">
+      <DependentUpon>DSReporte.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -29,10 +29,13 @@ namespace ProyectBasculaUtpl.Liquidacion
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMenuLiquidacion));
             this.PanelContenedorHijo = new System.Windows.Forms.Panel();
             this.PanelMenuCerrar = new System.Windows.Forms.Panel();
-            this.BtnBoletoSalida = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.BtnLiquidar = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.BtnReporte = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.PanelMenuCerrar.SuspendLayout();
             this.SuspendLayout();
@@ -49,8 +52,10 @@ namespace ProyectBasculaUtpl.Liquidacion
             // PanelMenuCerrar
             // 
             this.PanelMenuCerrar.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.PanelMenuCerrar.Controls.Add(this.BtnBoletoSalida);
+            this.PanelMenuCerrar.Controls.Add(this.panel2);
             this.PanelMenuCerrar.Controls.Add(this.BtnLiquidar);
+            this.PanelMenuCerrar.Controls.Add(this.panel1);
+            this.PanelMenuCerrar.Controls.Add(this.BtnReporte);
             this.PanelMenuCerrar.Controls.Add(this.label2);
             this.PanelMenuCerrar.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelMenuCerrar.Location = new System.Drawing.Point(0, 0);
@@ -58,45 +63,68 @@ namespace ProyectBasculaUtpl.Liquidacion
             this.PanelMenuCerrar.Size = new System.Drawing.Size(1267, 61);
             this.PanelMenuCerrar.TabIndex = 244;
             // 
-            // BtnBoletoSalida
+            // panel2
             // 
-            this.BtnBoletoSalida.Dock = System.Windows.Forms.DockStyle.Left;
-            this.BtnBoletoSalida.FlatAppearance.BorderColor = System.Drawing.Color.Navy;
-            this.BtnBoletoSalida.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnBoletoSalida.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnBoletoSalida.ForeColor = System.Drawing.Color.Navy;
-            this.BtnBoletoSalida.Location = new System.Drawing.Point(80, 0);
-            this.BtnBoletoSalida.Name = "BtnBoletoSalida";
-            this.BtnBoletoSalida.Size = new System.Drawing.Size(80, 61);
-            this.BtnBoletoSalida.TabIndex = 4;
-            this.BtnBoletoSalida.Text = "REPORTE";
-            this.BtnBoletoSalida.UseVisualStyleBackColor = true;
+            this.panel2.BackColor = System.Drawing.Color.Navy;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel2.Location = new System.Drawing.Point(1105, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1, 61);
+            this.panel2.TabIndex = 7;
             // 
             // BtnLiquidar
             // 
-            this.BtnLiquidar.Dock = System.Windows.Forms.DockStyle.Left;
+            this.BtnLiquidar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnLiquidar.BackgroundImage")));
+            this.BtnLiquidar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BtnLiquidar.Dock = System.Windows.Forms.DockStyle.Right;
             this.BtnLiquidar.FlatAppearance.BorderColor = System.Drawing.Color.Navy;
+            this.BtnLiquidar.FlatAppearance.BorderSize = 0;
             this.BtnLiquidar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnLiquidar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnLiquidar.ForeColor = System.Drawing.Color.Navy;
-            this.BtnLiquidar.Location = new System.Drawing.Point(0, 0);
+            this.BtnLiquidar.Location = new System.Drawing.Point(1106, 0);
             this.BtnLiquidar.Name = "BtnLiquidar";
             this.BtnLiquidar.Size = new System.Drawing.Size(80, 61);
-            this.BtnLiquidar.TabIndex = 3;
-            this.BtnLiquidar.Text = "LIQUIDAR";
+            this.BtnLiquidar.TabIndex = 6;
             this.BtnLiquidar.UseVisualStyleBackColor = true;
             this.BtnLiquidar.Click += new System.EventHandler(this.BtnLiquidar_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Navy;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel1.Location = new System.Drawing.Point(1186, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1, 61);
+            this.panel1.TabIndex = 5;
+            // 
+            // BtnReporte
+            // 
+            this.BtnReporte.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnReporte.BackgroundImage")));
+            this.BtnReporte.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BtnReporte.Dock = System.Windows.Forms.DockStyle.Right;
+            this.BtnReporte.FlatAppearance.BorderColor = System.Drawing.Color.Navy;
+            this.BtnReporte.FlatAppearance.BorderSize = 0;
+            this.BtnReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnReporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnReporte.ForeColor = System.Drawing.Color.Navy;
+            this.BtnReporte.Location = new System.Drawing.Point(1187, 0);
+            this.BtnReporte.Name = "BtnReporte";
+            this.BtnReporte.Size = new System.Drawing.Size(80, 61);
+            this.BtnReporte.TabIndex = 4;
+            this.BtnReporte.UseVisualStyleBackColor = true;
+            this.BtnReporte.Click += new System.EventHandler(this.BtnReporte_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Navy;
-            this.label2.Location = new System.Drawing.Point(776, 13);
+            this.label2.Location = new System.Drawing.Point(24, 11);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(479, 37);
+            this.label2.Size = new System.Drawing.Size(493, 39);
             this.label2.TabIndex = 2;
-            this.label2.Text = "PESAJE ENTRADA Y SALIDA";
+            this.label2.Text = "LIQUIDACION Y REPORTES";
             // 
             // FrmMenuLiquidacion
             // 
@@ -119,8 +147,10 @@ namespace ProyectBasculaUtpl.Liquidacion
 
         private System.Windows.Forms.Panel PanelContenedorHijo;
         private System.Windows.Forms.Panel PanelMenuCerrar;
-        private System.Windows.Forms.Button BtnBoletoSalida;
-        private System.Windows.Forms.Button BtnLiquidar;
+        private System.Windows.Forms.Button BtnReporte;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button BtnLiquidar;
+        private System.Windows.Forms.Panel panel1;
     }
 }

@@ -9,7 +9,7 @@ namespace ProyectBasculaUtpl.Pesaje.Salida
     public class ClassDatoEntrada
     {
 
-        public string IdBoletoDetalle { get; set; }
+        public int IdBoletoDetalle { get; set; }
         public string  Cod { get; set; }
         public string Producto { get; set; }
         public string Nombre { get; set; }

@@ -86,6 +86,12 @@
     <Compile Include="Liquidacion\FrmMenuLiquidacion.Designer.cs">
       <DependentUpon>FrmMenuLiquidacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Liquidacion\ReporteLiquidacion\FrmReporteLiquidacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Liquidacion\ReporteLiquidacion\FrmReporteLiquidacion.Designer.cs">
+      <DependentUpon>FrmReporteLiquidacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pesaje\Entrada\FrmPesajeEntrada.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +117,7 @@
     <Compile Include="Pesaje\Salida\FrmPesajeSalida.Designer.cs">
       <DependentUpon>FrmPesajeSalida.cs</DependentUpon>
     </Compile>
+    <Compile Include="Peso\ClassCapturaPeso.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Varios\Cliente\FrmCliente.cs">
@@ -142,6 +149,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Liquidacion\FrmMenuLiquidacion.resx">
       <DependentUpon>FrmMenuLiquidacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Liquidacion\ReporteLiquidacion\FrmReporteLiquidacion.resx">
+      <DependentUpon>FrmReporteLiquidacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pesaje\Entrada\FrmPesajeEntrada.resx">
       <DependentUpon>FrmPesajeEntrada.cs</DependentUpon>
@@ -202,6 +212,10 @@
     <ProjectReference Include="..\CADBascula\CADBascula.csproj">
       <Project>{b739b16d-7fe2-4ede-9483-511a765f0d50}</Project>
       <Name>CADBascula</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ReporteBascula\ReporteBascula.csproj">
+      <Project>{03a8d8ce-e3e0-4827-b0b9-ff4b2ad42f7b}</Project>
+      <Name>ReporteBascula</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
